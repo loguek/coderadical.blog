@@ -43,16 +43,17 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
         return (
           <article key={node.fields.slug}>
             <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
+
+                {/* <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                </Link> */}
+                  <div style={{display: `flex`, }}>
+                    <div className='title' style={{ flex: `1` }}>
+                      {title}
+                    </div>
+                    <div className='date'>{node.frontmatter.date}</div>
+                  </div>
+                  
+                
             </header>
             <section>
               <p
@@ -85,7 +86,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "dddd DD MMMM YYYY")
             title
             description
           }

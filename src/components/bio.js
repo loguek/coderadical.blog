@@ -9,6 +9,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
+import "./bio.css"
 import { rhythm } from "../utils/typography"
 
 const Bio = () => {
@@ -16,25 +17,33 @@ const Bio = () => {
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50) {
+          fixed(width: 72, height: 72) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      logo: file(absolutePath: { regex: "/logo.png/" }) {
+        childImageSharp {
+          fixed(width: 83, height: 23) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       site {
         siteMetadata {
+          title
+          blurb,
           author {
             name
-            summary
           }
         }
       }
     }
   `)
 
-  const { author } = data.site.siteMetadata
+  const { author, blurb, title } = data.site.siteMetadata
   return (
-    <div
+    <bio
       style={{
         display: `flex`,
         marginBottom: rhythm(2.5),
@@ -43,25 +52,33 @@ const Bio = () => {
       <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author.name}
+        fadeIn={false}
         style={{
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
-          minWidth: 50,
           borderRadius: `100%`,
         }}
         imgStyle={{
-          borderRadius: `50%`,
+          borderRadius: `72%`,
         }}
       />
-      <p>
-      Personal site of <strong>{author.name}</strong>
-      <br/>
-      Posts on code, techology, dev processes and life
-      </p>
+
+      <div style={{ padding: '0', margin: '0' }}>
+      <Image
+        fixed={data.logo.childImageSharp.fixed}
+        alt={title}
+        fadeIn={false}
+        style={{ display: `box` }}
+      />
       
-      
-      
-    </div>
+      <h2>
+        Personal site of {author.name}
+      </h2>
+      <h3>
+        {blurb}
+      </h3>
+      </div>
+    </bio>
   )
 }
 

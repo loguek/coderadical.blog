@@ -3,9 +3,9 @@ module.exports = {
     title: `Coderadical`,
     author: {
       name: `Kevin Logue`,
-      summary: `Covering coding, dev processes and life`,
     },
     description: `Personal site of Kevin Logue`,
+    blurb: `Code, development and life in general`,
     siteUrl: `https://coderadical.com`,
     social: {
       twitter: ``,
@@ -63,8 +63,8 @@ module.exports = {
         name: `Gatsby Starter Blog`,
         short_name: `GatsbyJS`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        background_color: `#222D49`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },
