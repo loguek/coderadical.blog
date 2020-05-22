@@ -39,7 +39,7 @@ const Layout = ({ location, title, children }) => {
       <header>{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
+        © {new Date().getFullYear()} coderadical.com - built using
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>

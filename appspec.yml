@@ -3,3 +3,9 @@ os: linux
 files:
   - source: /
     destination: /var/projects/
+
+hooks:
+  AfterInstall:
+    - location: scripts/afterInstall.sh
+      runas: ec2-user
+      timeout: 300
