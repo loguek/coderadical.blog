@@ -5,7 +5,6 @@ import { PageProps, Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 
 type Data = {
   site: {
@@ -43,17 +42,14 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
         return (
           <article key={node.fields.slug}>
             <header>
-
-                {/* <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                </Link> */}
+                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   <div style={{display: `flex`, }}>
                     <div className='title' style={{ flex: `1` }}>
                       {title}
                     </div>
                     <div className='date'>{node.frontmatter.date}</div>
                   </div>
-                  
-                
+                </Link>
             </header>
             <section>
               <p
