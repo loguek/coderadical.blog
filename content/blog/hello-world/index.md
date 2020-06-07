@@ -2,6 +2,9 @@
 title: Hello World
 date: "2020-05-29T22:03:03.284Z"
 description: "After countless domain name lapses and false starts, I’ve finally leapt(albeit pushed by Covid-19 boredom) and launched my blog/site upon the world. What this site will become is an unknown. Likely, I’ll post yearly apologies to an unvisited site and promise to post more."
+tags:
+- hello-world
+- gatsby
 ---
 
 After countless domain name lapses and false starts, I've finally leapt(albeit pushed by Covid-19 boredom) and launched my blog/site upon the world. What this site will become is an unknown. Likely, I'll post yearly apologies to an unvisited site and promise to post more.
