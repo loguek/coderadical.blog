@@ -13,9 +13,7 @@ I thought long and hard about the technology that I should use. Fighting my inne
 
 ![Designer Meme](./designer.meme.jpg)
 
-Another devilish temptation was design. I've always liked working on design aspects of various projects. As my experience has been mostly small teams, I've often had a strong say. The problem with this temptation is that I'm also a perfectionist. I could devote hours into what colour best represents me (#F15051) and who is likely to read this site(Mom?). So putting my managerial cap on and channelling my inner demanding-boss. So an MVP it is! (V2 will probably come with breaking features labelled as minor bug fixes in the release notes)
-
-As Gatsby does not require a node instance to run hosting should be fairly straightforward! Though I do have that **AWS EC2** instance that has been slowly pushing Bezo's to the trillion-dollar mark. EC2 it is, with Nginx providing web serving duties. I briefly played around with setting up **Jenkins**, hooking into **AWS CodeDeploy**. While **CI/CD** is all the rage, the added benefits to this type of project are small to none. 
+Another devilish temptation was design. I've always liked working on design aspects of various projects. As my experience has been mostly small teams, I've often had a strong say. The problem with this temptation is that I'm also a perfectionist. I could devote hours into what colour best represents me (#F15051), who is target audience and more importanly who will bother to read this(Thanks Mam!). So putting my managerial cap on and channelling my inner boss an MVP was pushed to live! (V2 will probably come with breaking features labelled as minor bug fixes in the release notes)
 
 All source for this site is available on [GitHub](https://github.com/loguek/coderadical). 
 
